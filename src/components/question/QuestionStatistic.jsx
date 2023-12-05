@@ -10,9 +10,6 @@ export const QuestionStatistic = ({
     return (
         <div className="question-statistic">
             <div className="question-detail-row title">
-                <div className="choice">
-                    <strong>Your choice</strong>
-                </div>
                 <div className="chose-option">
                     <strong>Option</strong>
                 </div>

@@ -12,7 +12,7 @@ export const Option = ({ id, value, handleClick, option, selected, disabled }) =
             </div>
             <Button
                 id={id}
-                text={selected ? "Your Choice" : "Vote"}
+                text={selected ? "Your Choice" : "Click"}
                 disabled={disabled}
                 onClick={onClick}
             />

@@ -16,10 +16,9 @@ code {
 form {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0.5rem 0.8rem #00000080;
   padding: 20px;
   margin: 50px auto;
-  width: 400px;
+  width: 800px;
 }
 
 h1 {
@@ -161,10 +160,15 @@ button:hover {
 .questions-block .questions {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .questions {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
   width: 100%;
 }
 
@@ -177,7 +181,7 @@ button:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   margin: 10px 20px 10px 20px;
   padding: 10px 10px 10px 10px;
-  width: 25%;
+
 }
 
 .question small {
@@ -258,7 +262,7 @@ button:hover {
 
 
 .user-row div:first-child {
-  width: 10%;
+  width: 20%;
 }
 
 .user-row,
@@ -386,7 +390,6 @@ button:hover {
   display: inline-block;
   color: #fff;
   border-radius: 3px 3px 0px 0px;
-  box-shadow: 0 0.5rem 0.8rem #00000080;
 }
 
 .panels {

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { QuestionsBlock } from "../components/question/QuestionsBlock";
 import { fetchQuestions } from "../store/pollsDataAsyncActions";
-import { Tabs } from "../components/common/Tabs";
 
 export const HomePage = ({ pollsData, dispatch }) => {
     const questionsData = pollsData?.questionsData;
@@ -27,34 +26,23 @@ export const HomePage = ({ pollsData, dispatch }) => {
     return (
         <div className="home">
             <div className="warpper">
-                <Tabs
-                    tabList={[
-                        { id: "one", label: "New Questions" },
-                        { id: "two", label: "Answered Questions" },
-                    ]}
-                    indexDefaultChecked={0}
-                />
-                <div className="panels">
-                    <div
-                        className="panel"
-                        id="one-panel"
-                    >
+                <table>
+                <tr>
                         <QuestionsBlock
-                            questions={unansweredQuestions}
-                            title={"New Questions"}
-                        />
-                    </div>
-                    <div
-                        className="panel"
-                        id="two-panel"
-                    >
-                        <QuestionsBlock
-                            questions={answeredQuestions}
-                            title={"Answered Questions"}
-                        />
-                    </div>
+                                questions={unansweredQuestions}
+                                title={"New Questions"}
+                            />
+                </tr>   
+                <tr>   
+                   
+                            <QuestionsBlock
+                                questions={answeredQuestions}
+                                title={"Done"}
+                            />
+                </tr>
+                   
+                    </table>  
                 </div>
-            </div>
         </div>
     );
 };

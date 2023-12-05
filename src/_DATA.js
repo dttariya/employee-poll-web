@@ -109,7 +109,7 @@ let questions = {
       text: 'take a course on ReactJS',
     },
     optionTwo: {
-      votes: ['mtsamis'],
+      votes: ['mtsamis','zoshikanlu'],
       text: 'take a course on unit testing with Jest'
     }
   },

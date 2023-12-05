@@ -49,16 +49,6 @@ Object {
         <h1>
           Login
         </h1>
-        <div
-          class="login-image"
-        >
-          <img
-            alt="User Avatar"
-            src="/images/login_image.jpg"
-            style="max-width: 100%; margin-bottom: 10px;"
-          />
-          <br />
-        </div>
         <div>
           <label
             for="username"
@@ -147,16 +137,6 @@ Object {
       <h1>
         Login
       </h1>
-      <div
-        class="login-image"
-      >
-        <img
-          alt="User Avatar"
-          src="/images/login_image.jpg"
-          style="max-width: 100%; margin-bottom: 10px;"
-        />
-        <br />
-      </div>
       <div>
         <label
           for="username"
