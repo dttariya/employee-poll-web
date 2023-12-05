@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../common/Button";
 
-export const Question = ({ questionId, createdUser, createdTime }) => {
+export const Poll = ({ questionId, createdUser, createdTime }) => {
     const convertedTime = new Date(createdTime);
     return (
         <td>

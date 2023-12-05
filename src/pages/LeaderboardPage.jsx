@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { UserRow } from "../components/leaderboard/UserRow";
+import { LeaderBoardRow } from "../components/leaderboard/LeaderBoardRow";
 import { updateLeaderboard } from "../store/pollsDataAsyncActions";
 
 export const LeaderboardPage = ({ dispatch, pollsData }) => {
@@ -28,7 +28,7 @@ export const LeaderboardPage = ({ dispatch, pollsData }) => {
             {Array.isArray(leaderboardData) &&
                 leaderboardData.map((user, index) => {
                     return (
-                        <UserRow
+                        <LeaderBoardRow
                             userData={user}
                             key={index}
                         />

@@ -1,4 +1,4 @@
-import { Question } from "./Question";
+import { Poll } from "./Poll";
 
 export const QuestionsBox = ({ title, questions }) => {
     return (
@@ -9,7 +9,7 @@ export const QuestionsBox = ({ title, questions }) => {
                     {Array.isArray(questions) &&
                         questions.map((question, index) => {
                             return (
-                                <Question
+                                <Poll
                                     key={index}
                                     questionId={question.id}
                                     createdTime={question.timestamp}

@@ -3,7 +3,7 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { HomePage } from "./pages/HomePage";
 import { QuestionDetailPage } from "./pages/QuestionDetailPage";
 import { LeaderboardPage } from "./pages/LeaderboardPage";
-import { NewPollPage } from "./pages/NewPollPage";
+import { NewPollPage } from "./pages/CreatePoll";
 
 const withRouter = (Component) => {
     const ComponentWithRouterProp = (props) => {

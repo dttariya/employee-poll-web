@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Option } from "../common/Option";
+import { Choice } from "../common/Choice";
 import { QuestionPoll } from "./QuestionPoll";
 
-export const QuestionDetail = ({
+export const PollDetails = ({
     questionData,
     questionText,
     authorData,
@@ -34,7 +34,7 @@ export const QuestionDetail = ({
             />
             <h4>{questionText}</h4>
             <div className="options">
-                <Option
+                <Choice
                     key={"option-no-one"}
                     id={"option-no-one"}
                     value={optOne.text}
@@ -43,7 +43,7 @@ export const QuestionDetail = ({
                     selected={optionOneSelected || choosen === "optionOne"}
                     disabled={isSelecting || disabled}
                 />
-                <Option
+                <Choice
                     key={"option-no-two"}
                     id={"option-no-two"}
                     value={optTwo.text}

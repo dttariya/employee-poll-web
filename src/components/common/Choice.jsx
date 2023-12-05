@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 
-export const Option = ({ id, value, handleClick, option, selected, disabled }) => {
+export const Choice = ({ id, value, handleClick, option, selected, disabled }) => {
     const onClick = () => {
         handleClick(option);
     };
@@ -12,7 +12,7 @@ export const Option = ({ id, value, handleClick, option, selected, disabled }) =
             </div>
             <Button
                 id={id}
-                text={selected ? "Your Choice" : "Click"}
+                text={selected ? "Your Choice" : "Vote"}
                 disabled={disabled}
                 onClick={onClick}
             />

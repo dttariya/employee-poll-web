@@ -1,4 +1,4 @@
-export const UserInfo = ({ userData }) => {
+export const UserDetails = ({ userData }) => {
     return (
         <div className="user-info">
             <img

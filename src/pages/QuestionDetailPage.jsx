@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { QuestionDetail } from "../components/question/QuestionDetail";
+import { PollDetails } from "../components/question/PollDetails";
 import { updateQuestionAnswer } from "../store/pollsDataAsyncActions";
 import { NotFoundPage } from "./NotFoundPage";
 import { getQuestion, getUserData } from "../helpers/apis";
@@ -55,7 +55,7 @@ export const QuestionDetailPage = ({ router, pollsData, dispatch }) => {
     return (
         <div>
             {completed && questionData && author?.id && (
-                <QuestionDetail
+                <PollDetails
                     questionData={questionData}
                     authorData={author}
                     questionText="Would You Rather?"

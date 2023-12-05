@@ -1,9 +1,9 @@
-import { UserInfo } from "./UserInfo";
+import { UserDetails } from "./UserDetails";
 
-export const UserRow = ({ userData }) => {
+export const LeaderBoardRow = ({ userData }) => {
     return (
         <div className="user-row">
-            <UserInfo userData={userData} />
+            <UserDetails userData={userData} />
             <div>{userData.answers}</div>
             <div>{userData.created}</div>
         </div>
