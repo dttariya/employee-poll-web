@@ -1,6 +1,6 @@
 import { Poll } from "./Poll";
 
-export const QuestionsBox = ({ title, questions }) => {
+export const PollQuestions = ({ title, questions }) => {
     return (
         
             <div className="questions-box">

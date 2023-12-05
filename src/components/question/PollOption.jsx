@@ -1,6 +1,6 @@
-import { QuestionPollRow } from "./QuestionPollRow";
+import { PollDetialsRow } from "./PollDetialsRow";
 
-export const QuestionPoll = ({
+export const PollOption = ({
     optionOne,
     optionOneSelected,
     optionTwo,
@@ -20,13 +20,13 @@ export const QuestionPoll = ({
                     <strong>Percent</strong>
                 </div>
             </div>
-            <QuestionPollRow
+            <PollDetialsRow
                 selected={optionOneSelected}
                 optionText={optionOne.text}
                 votesNumber={optionOne?.votes?.length}
                 totalVotes={totalVotes}
             />
-            <QuestionPollRow
+            <PollDetialsRow
                 selected={optionTwoSelected}
                 optionText={optionTwo.text}
                 votesNumber={optionTwo?.votes?.length}
