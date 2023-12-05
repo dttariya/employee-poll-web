@@ -144,7 +144,7 @@ button:hover {
   color: brown;
 }
 
-.questions-block {
+.questions-box {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -157,7 +157,7 @@ button:hover {
   text-align: center;
 }
 
-.questions-block .questions {
+.questions-box .questions {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -375,7 +375,7 @@ table, th, td {
   }
 }
 
-.warpper {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;

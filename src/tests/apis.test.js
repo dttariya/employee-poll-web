@@ -3,8 +3,8 @@ import { _saveQuestion, _saveQuestionAnswer } from "../_DATA";
 describe("_saveQuestion", () => {
     it("will return saved question", async () => {
         const question = {
-            optionOneText: "first option",
-            optionTwoText: "second option",
+            text1: "first option",
+            text2: "second option",
             author: "tylermcginnis",
         };
         const result = await _saveQuestion(question);
@@ -14,9 +14,9 @@ describe("_saveQuestion", () => {
     });
 
     it("will return an error if the question is invalid", async () => {
-        var invalidQuestion = { optionOneText: "first option", author: "tylermcginnis" };
+        var invalidQuestion = { text1: "first option", author: "tylermcginnis" };
         await expect(_saveQuestion(invalidQuestion)).rejects.toEqual(
-            "Please provide optionOneText, optionTwoText, and author"
+            "Please provide text1, text2, and author"
         );
     });
 });

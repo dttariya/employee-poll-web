@@ -45,7 +45,7 @@ describe("QuestionDetail", () => {
                 />
             </MemoryRouter>
         );
-        const choseOption = component.getByTestId("option-one");
+        const choseOption = component.getByTestId("option-no-one");
         fireEvent.click(choseOption);
         expect(handleAnswer).toHaveBeenCalledWith("optionOne");
     });
@@ -63,7 +63,7 @@ describe("QuestionDetail", () => {
                 />
             </MemoryRouter>
         );
-        const choseOption = component.getByTestId("option-two");
+        const choseOption = component.getByTestId("option-no-two");
         fireEvent.click(choseOption);
         expect(handleAnswer).toHaveBeenCalledWith("optionTwo");
     });

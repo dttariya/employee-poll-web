@@ -18,14 +18,13 @@ test('Render App', () => {
   );
 
   expect(view).toMatchSnapshot()
-  // eslint-disable-next-line testing-library/no-debugging-utils
-  // screen.debug();
-  const loginForm = screen.getByText(/Login/i);
-  const navHome = screen.getByText(/Home/i);
-  const navLeaderboard = screen.getByText(/Leaderboard/i);
-  const navCreateNewPoll = screen.getByText(/Create New Poll/i);
-  expect(loginForm).toBeInTheDocument();
-  expect(navHome).toBeInTheDocument();
-  expect(navLeaderboard).toBeInTheDocument();
-  expect(navCreateNewPoll).toBeInTheDocument();
+
+  const login = screen.getByText(/Login/i);
+  const navBarHome = screen.getByText(/Home/i);
+  const navBarLeaderboard = screen.getByText(/Leaderboard/i);
+  const navBarCreateNewPoll = screen.getByText(/Create New Poll/i);
+  expect(login).toBeInTheDocument();
+  expect(navBarHome).toBeInTheDocument();
+  expect(navBarLeaderboard).toBeInTheDocument();
+  expect(navBarCreateNewPoll).toBeInTheDocument();
 });

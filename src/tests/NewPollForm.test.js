@@ -20,9 +20,9 @@ describe("NewPollForm", () => {
             </MemoryRouter>
         );
 
-        const firstOption = component.getByTestId("optionOneText");
+        const firstOption = component.getByTestId("text1");
         fireEvent.change(firstOption, { target: { value: "First Option" } });
-        const secondOption = component.getByTestId("optionOneText");
+        const secondOption = component.getByTestId("text1");
         fireEvent.change(secondOption, { target: { value: "Second Option" } });
         var submitButton = component.getByTestId("submit-button");
         fireEvent.click(submitButton);

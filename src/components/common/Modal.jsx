@@ -1,7 +1,7 @@
 export const Modal = () => {
     return (
         <div
-            id="myModal"
+            id="header"
             className="modal"
         >
             <div className="modal-content">

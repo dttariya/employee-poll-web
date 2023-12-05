@@ -1,9 +1,9 @@
 import { Question } from "./Question";
 
-export const QuestionsBlock = ({ title, questions }) => {
+export const QuestionsBox = ({ title, questions }) => {
     return (
         
-            <div className="questions-block">
+            <div className="questions-box">
                 <h3>{title}</h3>
                 <div className="questions">
                     {Array.isArray(questions) &&

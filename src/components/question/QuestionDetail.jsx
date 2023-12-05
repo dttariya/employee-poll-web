@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Option } from "../common/Option";
-import { QuestionStatistic } from "./QuestionStatistic";
+import { QuestionPoll } from "./QuestionPoll";
 
 export const QuestionDetail = ({
     questionData,
@@ -9,11 +9,11 @@ export const QuestionDetail = ({
     handleAnswer,
     authedUserId,
 }) => {
-    const optionOne = questionData.optionOne;
-    const optionTwo = questionData.optionTwo;
-    const optionOneSelected = optionOne?.votes?.includes(authedUserId);
-    const optionTwoSelected = optionTwo?.votes?.includes(authedUserId);
-    const totalVotes = optionOne?.votes?.length + optionTwo?.votes?.length;
+    const optOne = questionData.optionOne;
+    const optTwo = questionData.optionTwo;
+    const optionOneSelected = optOne?.votes?.includes(authedUserId);
+    const optionTwoSelected = optTwo?.votes?.includes(authedUserId);
+    const totalVotes = optOne?.votes?.length + optTwo?.votes?.length;
     const disabled = optionOneSelected || optionTwoSelected;
     const [choosen, setChoosen] = useState("");
 
@@ -35,27 +35,27 @@ export const QuestionDetail = ({
             <h4>{questionText}</h4>
             <div className="options">
                 <Option
-                    key={"option-one"}
-                    id={"option-one"}
-                    value={optionOne.text}
+                    key={"option-no-one"}
+                    id={"option-no-one"}
+                    value={optOne.text}
                     option={"optionOne"}
                     handleClick={onSelect}
                     selected={optionOneSelected || choosen === "optionOne"}
                     disabled={isSelecting || disabled}
                 />
                 <Option
-                    key={"option-two"}
-                    id={"option-two"}
-                    value={optionTwo.text}
+                    key={"option-no-two"}
+                    id={"option-no-two"}
+                    value={optTwo.text}
                     option={"optionTwo"}
                     handleClick={onSelect}
                     selected={optionTwoSelected || choosen === "optionTwo"}
                     disabled={isSelecting || disabled}
                 />
             </div>
-            <QuestionStatistic
-                optionOne={optionOne}
-                optionTwo={optionTwo}
+            <QuestionPoll
+                optionOne={optOne}
+                optionTwo={optTwo}
                 optionOneSelected={optionOneSelected}
                 optionTwoSelected={optionTwoSelected}
                 totalVotes={totalVotes}

@@ -58,8 +58,8 @@ export const updateQuestionAnswer = createAsyncThunk(
 
 export const updateQuestion = createAsyncThunk(
     "polls-data/updateQuestion",
-    async ({ optionOneText, optionTwoText, author }) => {
-        return saveQuestion({ optionOneText, optionTwoText, author }).then(
+    async ({ text1, text2, author }) => {
+        return saveQuestion({ text1, text2, author }).then(
             async () => ({
                 questionsData: await getQuestions().then(
                     res => {

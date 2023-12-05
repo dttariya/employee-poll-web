@@ -31,6 +31,6 @@ export const saveQuestionAnswer = async ({ authedUserId, questionId, answer }) =
     })
 }
 
-export const saveQuestion = async ({ optionOneText, optionTwoText, author }) => {
-    _saveQuestion({ optionOneText, optionTwoText, author })
+export const saveQuestion = async ({ text1, text2, author }) => {
+    _saveQuestion({ text1, text2, author })
 }

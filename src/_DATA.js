@@ -144,26 +144,26 @@ export function _getQuestions() {
   })
 }
 
-function formatQuestion({ optionOneText, optionTwoText, author }) {
+function formatQuestion({ text1, text2, author }) {
   return {
     id: generateUID(),
     timestamp: Date.now(),
     author,
     optionOne: {
       votes: [],
-      text: optionOneText,
+      text: text1,
     },
     optionTwo: {
       votes: [],
-      text: optionTwoText,
+      text: text2,
     }
   }
 }
 
 export function _saveQuestion(question) {
   return new Promise((resolve, reject) => {
-    if (!question.optionOneText || !question.optionTwoText || !question.author) {
-      reject("Please provide optionOneText, optionTwoText, and author");
+    if (!question.text1 || !question.text2 || !question.author) {
+      reject("Please provide text1, text2, and author");
     }
 
     const formattedQuestion = formatQuestion(question)

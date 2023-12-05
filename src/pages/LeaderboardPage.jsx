@@ -14,7 +14,7 @@ export const LeaderboardPage = ({ dispatch, pollsData }) => {
             <div className="user-row title">
                 <div
                     className="user-info"
-                    style={{ marginLeft: 20 }}
+                    style={{ marginLeft: 40 }}
                 >
                     <strong>Users</strong>
                 </div>

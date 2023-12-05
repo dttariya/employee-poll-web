@@ -22,15 +22,15 @@ export const NewPoll = ({ authedUserId, dispatch, isLoading, navigate }) => {
                     }
                 >
                     <Input
-                        inputName="optionOneText"
-                        placeholder="Option One"
+                        inputName="text1"
+                        placeholder="First Option"
                         inputType="text"
                         inputLabel="First Option"
                         required={true}
                     />
                     <Input
-                        inputName="optionTwoText"
-                        placeholder="Option Two"
+                        inputName="text2"
+                        placeholder="Second Option"
                         inputType="text"
                         inputLabel="Second Option"
                         required={true}

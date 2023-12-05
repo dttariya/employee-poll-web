@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { QuestionsBlock } from "../components/question/QuestionsBlock";
+import { QuestionsBox } from "../components/question/QuestionsBox";
 import { fetchQuestions } from "../store/pollsDataAsyncActions";
 
 export const HomePage = ({ pollsData, dispatch }) => {
@@ -25,19 +25,19 @@ export const HomePage = ({ pollsData, dispatch }) => {
 
     return (
         <div className="home">
-            <div className="warpper">
+            <div className="wrapper">
                 <table>
                 <tr>
-                        <QuestionsBlock
+                        <QuestionsBox
                                 questions={unansweredQuestions}
                                 title={"New Questions"}
                             />
                 </tr>   
                 <tr>   
                    
-                            <QuestionsBlock
+                            <QuestionsBox
                                 questions={answeredQuestions}
-                                title={"Done"}
+                                title={"Completed"}
                             />
                 </tr>
                    
