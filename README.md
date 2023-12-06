@@ -10,9 +10,9 @@ To install the project navigate to the root folder and type "npm install"
 
 To run the project navigate to the root and type "npm install"
 
-## Extra Feature
+## Test
 
-The leader board can be sorted by the number of votes
+To run the project navigate to the root and type "npm test"
 
 ## Rubric Validation
 
