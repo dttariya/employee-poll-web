@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { PollQuestions } from "../components/question/PollQuestions";
 import { fetchQuestions } from "../store/pollsDataAsyncActions";
+import { Tabs } from "../components/common/Tabs";
 
 export const HomePage = ({ pollsData, dispatch }) => {
     const questionsData = pollsData?.questionsData;
@@ -24,25 +25,36 @@ export const HomePage = ({ pollsData, dispatch }) => {
     }, [dispatch, pollsData?.userData?.id, questionsData]);
 
     return (
-        <div className="home">
-            <div className="wrapper">
-                <table>
-                <tr>
+        
+            <div className="warpper">
+                <Tabs
+                    tabList={[
+                        { id: "one", label: "New Questions" },
+                        { id: "two", label: "Answered Questions" },
+                    ]}
+                    indexDefaultChecked={0}
+                />
+                <div className="panels">
+                    <div
+                        className="panel"
+                        id="one-panel"
+                    >
                         <PollQuestions
-                                questions={unansweredQuestions}
-                                title={"New Questions"}
-                            />
-                </tr>   
-                <tr>   
-                   
-                            <PollQuestions
-                                questions={answeredQuestions}
-                                title={"Completed"}
-                            />
-                </tr>
-                   
-                    </table>  
+                            questions={unansweredQuestions}
+                            title={"New Questions"}
+                        />
+                    </div>
+                    <div
+                        className="panel"
+                        id="two-panel"
+                    >
+                        <PollQuestions
+                            questions={answeredQuestions}
+                            title={"Answered Questions"}
+                        />
+                    </div>
                 </div>
-        </div>
+            </div>
+
     );
 };

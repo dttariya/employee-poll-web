@@ -394,7 +394,6 @@ table, th, td {
 
 .panels {
   background: #fffffff6;
-  box-shadow: 0 2rem 2rem #00000080;
   min-height: 200px;
   width: 80%;
   border-radius: 3px;
