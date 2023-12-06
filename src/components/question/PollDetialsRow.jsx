@@ -1,4 +1,4 @@
-export const QuestionPollRow = ({ selected, optionText, votesNumber, totalVotes }) => {
+export const PollDetialsRow = ({ selected, optionText, votesNumber, totalVotes }) => {
     return (
         <div className="question-detail-row">
             <div className="chose-option justify-left">{optionText}</div>

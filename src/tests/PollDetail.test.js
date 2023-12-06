@@ -1,11 +1,9 @@
-/* eslint-disable testing-library/prefer-screen-queries */
-/* eslint-disable testing-library/render-result-naming-convention */
-import { QuestionDetail } from "../components/question/QuestionDetail";
+import { PollDetails } from "../components/question/PollDetails";
 import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
 
-describe("QuestionDetail", () => {
+describe("PollDetails", () => {
     const mockQuestionData = {
         id: 'xj352vofupe1dqz9emx13r',
         author: 'mtsamis',
@@ -36,7 +34,7 @@ describe("QuestionDetail", () => {
         const handleAnswer = jest.fn()
         const component = render(
             <MemoryRouter>
-                <QuestionDetail
+                <PollDetails
                     questionData={mockQuestionData}
                     authorData={mockAuthedUser}
                     questionText="Would You Rather?"
@@ -54,7 +52,7 @@ describe("QuestionDetail", () => {
         const handleAnswer = jest.fn()
         const component = render(
             <MemoryRouter>
-                <QuestionDetail
+                <PollDetails
                     questionData={mockQuestionData}
                     authorData={mockAuthedUser}
                     questionText="Would You Rather?"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Choice } from "../common/Choice";
-import { QuestionPoll } from "./QuestionPoll";
+import { PollOption } from "./PollOption";
 
 export const PollDetails = ({
     questionData,
@@ -53,7 +53,7 @@ export const PollDetails = ({
                     disabled={isSelecting || disabled}
                 />
             </div>
-            <QuestionPoll
+            <PollOption
                 optionOne={optOne}
                 optionTwo={optTwo}
                 optionOneSelected={optionOneSelected}

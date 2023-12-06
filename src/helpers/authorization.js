@@ -1,6 +1,6 @@
 import { _getUsers } from "../_DATA";
 
-export const checkAuthorization = async ({ userid }) => {
+export const checkAuth = async ({ userid }) => {
     let user
     await _getUsers().then(
         res => {

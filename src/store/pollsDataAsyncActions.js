@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { checkAuthorization, isLoginSucceeded } from "../helpers/authorization";
+import { checkAuth, isLoginSucceeded } from "../helpers/authorization";
 import { getAllUsersData, getQuestions, getUserData, saveQuestion, saveQuestionAnswer } from "../helpers/apis";
 
 export const updateUserData = createAsyncThunk(
@@ -9,7 +9,7 @@ export const updateUserData = createAsyncThunk(
         if (userData?.username && userData?.password) {
             response = await isLoginSucceeded(userData);
         } else {
-            response = await checkAuthorization({ userid: userData?.username })
+            response = await checkAuth({ userid: userData?.username })
         }
         return { userData: response }
     });
